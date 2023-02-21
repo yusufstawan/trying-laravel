@@ -9,6 +9,17 @@ use Illuminate\Support\Str;
 class PostController extends Controller
 {
 
+    // permission middleware
+    public function __construct()
+    {
+        $this->middleware('permission:view posts', ['only' => ['index']]);
+        $this->middleware('permission:create posts', ['only' => ['create', 'store']]);
+        $this->middleware('permission:edit posts', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:delete posts', ['only' => ['destroy']]);
+        $this->middleware('permission:publish posts', ['only' => ['publish']]);
+        $this->middleware('permission:unpublish posts', ['only' => ['unpublish']]);
+    }
+
     // method ini akan dipanggil ketika route /post diakses
     public function index()
     {
@@ -128,5 +139,15 @@ class PostController extends Controller
                     'error' => 'Some problem has occurred, please try again'
                 ]);
         }
+    }
+
+    public function publish(int $id)
+    {
+        echo 'post published';
+    }
+
+    public function unpublish(int $id)
+    {
+        echo 'post unpublished';
     }
 }

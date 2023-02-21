@@ -25,3 +25,5 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 Route::resource('post', PostController::class);
+Route::put('post/{id}/publish', [PostController::class, 'publish'])->name('post.publish');
+Route::put('post/{id}/unpublish', [PostController::class, 'unpublish'])->name('post.unpublish');
