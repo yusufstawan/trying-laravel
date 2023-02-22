@@ -1,3 +1,4 @@
 <div>
-    <!-- Order your soul. Reduce your wants. - Augustine -->
+    <h3>Test Input Component</h3>
+    <p>dari input : {{ $input }}</p>
 </div>
