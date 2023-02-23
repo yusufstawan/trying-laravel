@@ -10,9 +10,20 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
 
+                    <div class="mb-4">
+                        <h1>Template</h1>
+                        <x-template.navbar />
+                    </div>
 
-                    <x-template.navbar />
+                    <div class="mb-4">
+                        <h1>Form</h1>
+                        <x-forms.input />
+                    </div>
 
+                    <div class="mb-4">
+                        <h1>Output</h1>
+                        <x-template.navbar one="Home" two="About" three="Contact" four="Blog" />
+                    </div>
 
                 </div>
             </div>

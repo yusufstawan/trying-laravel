@@ -16,4 +16,15 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('autoprefixer'),
 ]);
 
+// disable notifications
 mix.disableNotifications();
+// enable browserSync
+mix.browserSync({
+    proxy: 'http://localhost:8000',
+    files: [
+        'app/**/*.php',
+        'resources/views/**/*.php',
+        'public/js/**/*.js',
+        'public/css/**/*.css',
+    ]
+});
