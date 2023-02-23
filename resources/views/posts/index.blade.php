@@ -109,11 +109,6 @@
                 </div>
             </div>
         </div>
-
-
-        {{-- testing component --}}
-        <x-alert message="test message" name="test name" number="1" />
-        <x-forms.input input="halo" />
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
