@@ -43,4 +43,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // relationships between models
+    public function templates()
+    {
+        return $this->hasMany(Template::class);
+    }
+
+    public function templatesBuilds()
+    {
+        return $this->hasMany(TemplatesBuild::class);
+    }
 }

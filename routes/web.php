@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\TemplateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,5 @@ require __DIR__ . '/auth.php';
 Route::resource('post', PostController::class);
 Route::put('post/{id}/publish', [PostController::class, 'publish'])->name('post.publish');
 Route::put('post/{id}/unpublish', [PostController::class, 'unpublish'])->name('post.unpublish');
+
+Route::get('template', [TemplateController::class, 'index'])->name('template.index');

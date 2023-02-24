@@ -11,6 +11,16 @@ class Template extends Model
 
     protected $fillable = [
         'name',
-        'html',
+        'template',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function templatesBuilds()
+    {
+        return $this->hasMany(TemplatesBuild::class);
+    }
 }
